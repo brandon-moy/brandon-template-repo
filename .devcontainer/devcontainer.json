@@ -13,16 +13,16 @@
   "customizations": {
     "vscode": {
       "extensions": [
-		"AdamCaviness.theme-monokai-dark-soda",
-		"esbenp.prettier-vscode",
-		"formulahendry.auto-rename-tag",
-		"thebearingedge.livereload-server"
-	]
+        "AdamCaviness.theme-monokai-dark-soda",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-rename-tag",
+        "thebearingedge.livereload-server"
+      ]
     }
   },
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "npm i"
+  "postCreateCommand": "npm i && sed -i 's/\r$//' .husky/pre-commit"
 
   // Configure tool-specific properties.
   // "customizations": {},
